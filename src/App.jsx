@@ -38,18 +38,24 @@ const tweetsArray = [
   },
 ];
 
-function App() {
+function App(tweet) {
   return (
     <div className="App">
-      <Tweet tweet={tweetsArray[0]} />
-      <Tweet tweet={tweetsArray[1]} />
-      <Tweet tweet={tweetsArray[2]} />
-    </div>
-  );
-}
-
+      {tweetsArray.map((tweetElement) => {
+        return <Tweet tweet={tweetElement}/>
+      } )}
+   
+     
+  </div>
+     )
+    }
+    
 export default App;
 
 // function sayHi() {}
 
 // sayHi('Kat')
+
+      /* <Tweet tweet={tweetsArray[0]}/>
+         <Tweet tweet={tweetsArray[1]}/>
+         <Tweet tweet={tweetsArray[2]}/>*/

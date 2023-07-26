@@ -15,19 +15,14 @@ function Tweet(props) {
 
       <div className="body">
         <div className="top">
-          
-            <User
-              name={props.tweet.user.name}
-              handle={props.tweet.user.handle}
-            />
-          
+          <User name={props.tweet.user.name} handle={props.tweet.user.handle} />
 
           <Timestamp time={props.tweet.timestamp} />
         </div>
 
         <Message msg={props.tweet.message} />
 
-        
+        <Actions />
       </div>
 
       <i className="fas fa-ellipsis-h"></i>
